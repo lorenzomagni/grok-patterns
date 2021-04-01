@@ -1,0 +1,1 @@
+%{MONTH:mese}%{SPACE}%{BASE10NUM:numbase10} %{TIME:ora}%{GREEDYDATA}(moruga|icteam-nagios.icteam.local|graylog) sshd\[%{BASE10NUM}\]%{GREEDYDATA}: (pam_sss|pam_unix)\(sshd:auth\):%{GREEDYDATA:autenticazione_fallita};%{GREEDYDATA}logname=.* uid=.* euid=.* tty=.* ruser=.* rhost=.*
