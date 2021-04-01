@@ -1,0 +1,1 @@
+%{MONTH:month}%{SPACE}%{BASE10NUM:day} %{TIME:time}%{GREEDYDATA}graylog su: FAILED SU \(to root\)%{GREEDYDATA:su_user_failed}%{GREEDYDATA}on pts/0
