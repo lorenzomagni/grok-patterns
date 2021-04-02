@@ -10,8 +10,7 @@ I applied the following patterns to the logs in order to extract specific data a
 If someone tries to become SU and types the wrong password, this is how you can intercept him:
 
 ```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora}%{GREEDYDATA}graylog su: FAILED SU \(to root\)%{GREEDYDATA:utente_fallito_su}%{GREEDYDATA}on pts/0```
-_____
-
+#
 If you want to create a table with all the SU who connected:
 
 ```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora} %{GREEDYDATA}graylog su: %{GREEDYDATA}pam_unix\(su-l:session\):%{GREEDYDATA:stato_sessione}%{SPACE} %{GREEDYDATA}for user root by%{SPACE}%{GREEDYDATA:utente_su}%{GREEDYDATA}\(uid=%{BASE10NUM}\)```
