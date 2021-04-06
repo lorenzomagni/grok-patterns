@@ -32,7 +32,7 @@ Autenticazione fallita nagios|moruga|graylog, pam_unix|pam_sss SENZA UTENTE:
 #
 Autenticazione fallita pam_unix|pam_sss CON UTENTE:
 
-```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora} %{GREEDYDATA}graylog sshd\[%{BASE10NUM}\]: %{GREEDYDATA}(pam_unix|pam_sss)\(sshd:auth\): %{GREEDYDATA:autenticazione_fallita}%{GREEDYDATA} logname=.* uid=.* euid=.* tty=.* ruser=.* rhost=.* user=%{GREEDYDATA:utente}```
+```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora} %{GREEDYDATA}graylog sshd\[%{BASE10NUM}\]: %{GREEDYDATA}(pam_unix|pam_sss)\(sshd:auth\): %{GREEDYDATA:autenticazione_fallita}%{GREEDYDATA}; logname=.* uid=.* euid=.* tty=.* ruser=.* rhost=.* user=%{GREEDYDATA:utente}```
 ____
 
 [Lorenzo](https://www.linkedin.com/in/lorenzomagni97/)
