@@ -7,9 +7,9 @@ I applied the following patterns to the logs in order to extract specific data a
 
 ## Grok patterns for SU:
 
-If someone tries to become SU and types the wrong password, this is how you can intercept him:
+If someone tries to become SU and types the wrong password, this is how you can intercept him (su_to è l'account a cui hanno tentato l'accesso, fallendo. utente_fallito_su è l'utente che ha tentato di farlo):
 
-```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora}%{GREEDYDATA}graylog su: FAILED SU \(to root\)%{GREEDYDATA:utente_fallito_su}%{GREEDYDATA}on pts/0```
+```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora}%{GREEDYDATA}graylog su: FAILED SU \(to %{GREEDYDATA:su_to}\)%{GREEDYDATA:utente_fallito_su}%{GREEDYDATA}on pts/0```
 #
 If you want to create a table with all the SU who connected:
 
