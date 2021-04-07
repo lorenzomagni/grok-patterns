@@ -20,7 +20,7 @@ ____
 
 Normal user fails authentication, pattern for logs without user name:
 
-```%{MONTH:mese} %{BASE10NUM:numbase10} %{TIME:ora}%{GREEDYDATA}graylog sshd\[%{BASE10NUM}\]%{GREEDYDATA}: pam_unix\(sshd:auth\)%{GREEDYDATA:autenticazione_fallita}: authentication failure%{GREEDYDATA}logname= uid=0 euid=0 tty=ssh ruser= rhost=%{IP}```
+```%{MONTH:mese}%{SPACE}%{BASE10NUM:numbase10} %{TIME:ora}%{GREEDYDATA}graylog sshd\[%{BASE10NUM}\]%{GREEDYDATA}: (pam_sss|pam_unix)\(sshd:auth\):%{GREEDYDATA:autenticazione_fallita};%{GREEDYDATA}logname= uid=.* euid=.* tty=.* ruser=.* rhost=%{IP}```
 #
 Autenticazione fallita 2:
 
