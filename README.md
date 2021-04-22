@@ -26,9 +26,9 @@ Autenticazione fallita nagios|moruga|graylog, pam_unix|pam_sss SENZA UTENTE:
 
 ```%{MONTH:mese}%{SPACE}%{BASE10NUM:numbase10} %{TIME:ora}%{GREEDYDATA}(moruga|icteam-nagios.icteam.local|graylog) sshd\[%{BASE10NUM}\]%{GREEDYDATA}: (pam_sss|pam_unix)\(sshd:auth\):%{GREEDYDATA:autenticazione_fallita};%{GREEDYDATA}logname=.* uid=.* euid=.* tty=.* ruser=.* rhost=.*```
 #
-Autenticazione fallita nagios|moruga|graylog, pam_unix|pam_sss CON UTENTE:
+Autenticazione fallita nagios|moruga|graylog|icteam-censored, pam_unix|pam_sss CON UTENTE:
 
-```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora} %{GREEDYDATA}(moruga|icteam-nagios.icteam.local|graylog) sshd\[%{BASE10NUM}\]: %{GREEDYDATA}(pam_unix|pam_sss)\(sshd:auth\): %{GREEDYDATA:autenticazione_fallita}%{GREEDYDATA}; logname=.* uid=.* euid=.* tty=.* ruser=.* rhost=.* user=%{GREEDYDATA:utente}```
+```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora} %{GREEDYDATA}(moruga|icteam-nagios.icteam.local|graylog|icteam-censored) sshd\[%{BASE10NUM}\]: %{GREEDYDATA}(pam_unix|pam_sss)\(sshd:auth\): %{GREEDYDATA:autenticazione_fallita}%{GREEDYDATA}; logname=.* uid=.* euid=.* tty=.* ruser=.* rhost=.* user=%{GREEDYDATA:utente}```
 ____
 
 [Lorenzo](https://www.linkedin.com/in/lorenzomagni97/)
