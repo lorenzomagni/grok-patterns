@@ -31,4 +31,10 @@ Autenticazione fallita nagios|moruga|graylog|icteam-censored, pam_unix|pam_sss C
 ```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora} %{GREEDYDATA}(moruga|icteam-nagios.icteam.local|graylog|icteam-censored) sshd\[%{BASE10NUM}\]: %{GREEDYDATA}(pam_unix|pam_sss)\(sshd:auth\): %{GREEDYDATA:autenticazione_fallita}%{GREEDYDATA}; logname=.* uid=.* euid=.* tty=.* ruser=.* rhost=.* user=%{GREEDYDATA:utente}```
 ____
 
+## Grok patterns for invalid users:
+
+Utente non valido tipo graylog|moruga|icteam-ora08|icteam-ora07:
+
+```%{MONTH:mese}%{SPACE}%{BASE10NUM:giorno} %{TIME:ora} %{GREEDYDATA}(graylog|moruga|icteam-ora08|icteam-ora07) sshd\[%{BASE10NUM}\]: %{GREEDYDATA}(Invalid user|input_userauth_request:)%{GREEDYDATA:utente_non_valido}```
+
 [Lorenzo](https://www.linkedin.com/in/lorenzomagni97/)
