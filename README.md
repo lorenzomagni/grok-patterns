@@ -77,4 +77,5 @@ esito_autenticazione, utente:
 esito_autenticazione, utente (icteam-ora), ip_utente:
 
 ```%{MONTH:mese}%{SPACE}%{BASE10NUM:numbase10} %{TIME:ora}%{GREEDYDATA}(moruga|icteam-nagios.icteam.local|graylog|icteam-ora07|icteam-ora08) sshd\\[%{BASE10NUM}\\]:%{SPACE}%{GREEDYDATA:esito_autenticazione} for%{GREEDYDATA:utente} from %{IP:ip_utente} port %{BASE10NUM} .*```
+
 [Lorenzo](https://www.linkedin.com/in/lorenzomagni97/)
